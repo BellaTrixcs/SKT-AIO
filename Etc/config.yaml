@@ -1,0 +1,10 @@
+verbose: 0
+listen:
+# // Standar WebSocket OVPN
+- target_host: 127.0.0.1
+  target_port: 1194
+  listen_port: 512
+# // Standar WebSocket SSH NonTLS
+- target_host: 127.0.0.1
+  target_port: 109
+  listen_port: 2080
