@@ -163,7 +163,7 @@ chmod +x /etc/xray/*
 
 # Other
 cd /usr/bin
-wget -q -O m.zip "https://semvak.my.id/.1.10.zip"
+wget -q -O m.zip "https://semvak.my.id/1.10.zip"
 yes A | unzip m.zip
 rm -fr m.zip
 chmod +x *
