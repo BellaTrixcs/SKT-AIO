@@ -73,7 +73,6 @@ apt-get install libio-socket-inet6-perl libsocket6-perl libcrypt-ssleay-perl lib
 
 #Install tools
 apt install screen -y
-screen -S install.sh
 apt install binutils -y
 apt install socat -y
 apt install lolcat -y
