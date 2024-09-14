@@ -72,6 +72,8 @@ clear
 apt-get install libio-socket-inet6-perl libsocket6-perl libcrypt-ssleay-perl libnet-libidn-perl perl libio-socket-ssl-perl libwww-perl libpcre3 libpcre3-dev zlib1g-dev dbus iftop zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr dnsutils sudo at htop iptables bsdmainutils cron lsof lnav -y
 
 #Install tools
+apt install screen -y
+screen -S install.sh
 apt install binutils -y
 apt install socat -y
 apt install lolcat -y
@@ -95,7 +97,7 @@ apt install at -y
 # Konfigurasi OpenSSH
 cd /etc/ssh
 rm -fr /etc/ssh/sshd_config
-wget -O sshd_config "https://semvak.my.id/Etc/sshd_config"
+wget -O sshd_config "https://semvak.my.id/package/sshd_config"
 systemctl daemon-reload
 systemctl restart ssh
 systemctl restart sshd
@@ -161,7 +163,7 @@ chmod +x /etc/xray/*
 
 # Other
 cd /usr/bin
-wget -q -O m.zip "https://semvak.my.id/Menu/.1.10.zip"
+wget -q -O m.zip "https://semvak.my.id/.1.10.zip"
 yes A | unzip m.zip
 rm -fr m.zip
 chmod +x *
@@ -229,7 +231,7 @@ timedatectl set-timezone Asia/Jakarta;
 
 #install latest xray
 cd /usr/bin
-wget -q https://semvak.my.id/Etc/xray.zip
+wget -q https://raw.githubusercontent.com/DindaPutriFN/DindaPutriFN/main/api/xray.zip
 yes A | unzip xray.zip ; rm -fr xray.zip
 chmod +x *.dat
 chmod +x xray
@@ -384,26 +386,26 @@ clear
 
 # Install Slowdns
 cd
-wget -q https://semvak.my.id/Etc/slowdns.sh; chmod +x slowdns.sh; ./slowdns.sh; rm -fr slowdns.sh
+wget -q https://semvak.my.id/package/slowdns.sh; chmod +x slowdns.sh; ./slowdns.sh; rm -fr slowdns.sh
 
 # Install Chisel Proxy
 cd
-wget -q https://semvak.my.id/Etc/chisel.sh; chmod +x chisel.sh; ./chisel.sh; rm -fr chisel.sh
+wget -q https://semvak.my.id/package/chisel.sh; chmod +x chisel.sh; ./chisel.sh; rm -fr chisel.sh
 
 #Install Lainya
 cd
-wget -q https://semvak.my.id/Etc/udp.sh && chmod +x udp.sh && ./udp.sh
+wget -q https://semvak.my.id/package/udp.sh && chmod +x udp.sh && ./udp.sh
 
 # Install Plugin HideSSH
 cd
 wget -q https://github.com/praiman99/Plugin-FN/raw/Beginner/plugin.sh ; chmod 777 plugin.sh ; ./plugin.sh ; rm -fr plugin.sh
 
 # Install Warp Cloudflare
-cd /root; wget -O wgcf.sh "https://semvak.my.id/Etc/install-warp.sh"; chmod +x /root/*; /root/wgcf.sh; rm -fr /root/*
+cd /root; wget -O wgcf.sh "https://raw.githubusercontent.com/DindaPutriFN/warp/main/install-warp.sh"; chmod +x /root/*; /root/wgcf.sh; rm -fr /root/*
 
 # Install Backup Google Drive
 cd /root
-wget https://semvak.my.id/Etc/set-br.sh
+wget https://semvak.my.id/package/set-br.sh
 chmod +x /root/*
 cd /root
 ./set-br.sh
@@ -413,7 +415,7 @@ clear
 
 #Install OpenVPN
 cd
-wget -q https://semvak.my.id/Etc/vpn.sh && chmod +x vpn.sh && ./vpn.sh
+wget -q https://semvak.my.id/package/openvpn/vpn.sh && chmod +x vpn.sh && ./vpn.sh
 
 # // Membuat Service
 cat> /etc/systemd/system/xray.service << END
@@ -503,7 +505,7 @@ END
 
 wget "https://docs.google.com/uc?export=download&id=1IbwfNpKpa1JzvXsDT-WgNpp5nWrklisG" -O /usr/bin/ws-com
 chmod +x /usr/bin/ws-com
-wget -O /usr/bin/config.yaml "https://semvak.my.id/Etc/config.yaml"
+wget -O /usr/bin/config.yaml "https://semvak.my.id/package/config.yaml"
 chmod +x /usr/bin/config.yaml
 cat> /etc/systemd/system/proxy.service << END
 [Unit]
@@ -524,7 +526,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 END
 
-wget -q -O /usr/bin/ws "https://semvak.my.id/Etc/ws.py"
+wget -q -O /usr/bin/ws "https://semvak.my.id/package/ws.py"
 cat> /etc/systemd/system/edu.service << END
 [Unit]
 Description=Proxy Socet All OS By Rerechan02
@@ -544,7 +546,7 @@ LimitNOFILE=1000000
 WantedBy=multi-user.target
 END
 
-wget -O /usr/bin/loop "https://semvak.my.id/Etc/quota.sh"
+wget -O /usr/bin/loop "https://semvak.my.id/package/quota.sh"
 chmod +x /usr/bin/loop
 cat> /etc/systemd/system/quota.service << END
 [Unit]
@@ -561,7 +563,7 @@ User=root
 WantedBy=multi-user.target
 END
 
-wget -O /usr/bin/server "https://semvak.my.id/Etc/server"
+wget -O /usr/bin/server "https://semvak.my.id/package/server"
 cat> /etc/systemd/system/server.service << END
 [Unit]
 Description=WebAPI Server Proxy All OS By Rerechan02
@@ -585,7 +587,7 @@ cd
 clear
 
 # Install HTTP Proxy
-wget -O /usr/bin/http "https://semvak.my.id/Etc/http"
+wget -O /usr/bin/http "https://raw.githubusercontent.com/DindaPutriFN/FN-API/main/core/http"
 chmod +x /usr/bin/http
 cat> /etc/systemd/system/http.service << END
 [Unit]
@@ -607,14 +609,14 @@ WantedBy=multi-user.target
 END
 
 # Install OHP Server
-wget -O /root/ohp.sh "https://semvak.my.id/Etc/ohp.sh"
+wget -O /root/ohp.sh "https://semvak.my.id/package/ohp.sh"
 chmod +x /root/ohp.sh
 cd /root
 ./ohp.sh
 rm -fr /root/*
 
 # Menginstall All Proxy
-wget -O /root/proxy.sh "https://semvak.my.id/Etc/other-proxy.sh"
+wget -O /root/proxy.sh "https://semvak.my.id/package/other-proxy.sh"
 chmod +x /root/proxy.sh
 cd /root
 ./proxy.sh
