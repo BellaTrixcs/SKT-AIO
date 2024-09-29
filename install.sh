@@ -16,6 +16,9 @@ clear
 #systemctl restart ssh
 #systemctl restart sshd
 #systemctl start systemd-resolved
+clear
+[[ -e $(which curl) ]] && if [[ -z $(cat /etc/resolv.conf | grep "1.1.1.1") ]]; then cat <(echo "nameserver 1.1.1.1") /etc/resolv.conf > /etc/resolv.conf.tmp && mv /etc/resolv.conf.tmp /etc/resolv.conf; fi
+clear
 
 #Bikin File
 clear
