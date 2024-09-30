@@ -1,9 +1,7 @@
 #!/bin/bash
 #
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
-#  • Autoscript AIO Lite Menu By FN Project                                          |
-#  • FN Project Developer @Rerechan02 | @PR_Aiman | @farell_aditya_ardian            |
-#  • Copyright 2024 18 Marc Indonesia [ Kebumen ] | [ Johor ] | [ 上海，中国 ]       |
+#  • Autoscript SKT AIO Lite - Jangan Lupa Sholat
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
 #
 
@@ -34,7 +32,7 @@ chmod +x /var/log/xray/*
 clear
 
 #domain
-read -rp "Masukkan Domain: " domain
+read -rp "Masukan Nama Domain: " domain
 #read -p "Nameserver: " nsdomain
 #read -p "Api Bot Token: " api
 #read -p "Admin ID Telegram: " id
@@ -111,11 +109,7 @@ apt install dropbear -y
 rm /etc/default/dropbear
 rm /etc/issue.net
 cat> /etc/issue.net << END
-</strong> <p style="text-align:center"><b> <br><font color="#00FFE2"<br>┏━━━━━━━━━━━━━━━┓<br> RERECHAN STORE<br>┗━━━━━━━━━━━━━━━┛<br></font><br><font color="#00FF00"></strong> <p style="text-align:center"><b> <br><font color="#00FFE2">क═══════क⊹⊱✫⊰⊹क═══════क</font><br><font color='#FFFF00'><b> ★ [ ༆Hʸᵖᵉʳ᭄W̺͆E̺͆L̺͆C̺͆O̺͆M̺͆E̺͆
-T̺͆O̺͆ M̺͆Y̺͆ S̺͆E̺͆R̺͆V̺͆E̺͆R̺͆ V͇̿I͇̿P͇̿ ] ★ </b></font><br><font color="#FFF00">ℝ𝕖𝕣𝕖𝕔𝕙𝕒𝕟 𝕊𝕥𝕠𝕣𝕖</font><br> <font color="#FF00FF">❖Ƭʜᴇ No DDOS</font><br> <font color="#FF0000">❖Ƭʜᴇ No Torrent</font><br> <font color="#FFB1C2">❖Ƭʜᴇ No Bokep </font><br> <font color="#FFFFFF">❖Ƭʜᴇ No Hacking</font><br>
-<font color="#00FF00">❖Ƭʜᴇ No Mining</font><br> <font color="#00FF00">➳ᴹᴿ᭄ Oder / Trial :
-https://wa.me/62858630085249 </font><br>
-<font color="#00FFE2">क═══════क⊹⊱✫⊰⊹क═══════क</font><br></font><br><font color="FFFF00">❖Ƭʜᴇ WHATSAPP GRUP => https://chat.whatsapp.com/LlJmbvSQ2DsHTA1EccNGoO</font><br>
+</strong> <B><h5 style='text-align:center';><font color='#07D41'><B>‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="green">🐍 SKT </font><font color="#f57c00">𝐕𝐏𝐍</font> <font color="green">AIO 🐍</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span><font color="white">JANGAN LUPA SHOLAT !</span><br><br><b>⛔ 𝐓erms 𝐎f 𝐒ervice ⛔<br>No 18+<br>No Multi Login<br>Max Login 2 Device<br><B><span style='text-align:center';><br><b>💯 Amanah & Bergaransi<br>https://t.me/SaputraTech<B><span style='text-align:center';><font color='#07D41'><B>‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="white">🏅 Thanks You For Support 🏅</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬</h5><br>
 END
 cat>  /etc/default/dropbear << END
 # disabled because OpenSSH is installed
@@ -284,10 +278,10 @@ cd
 country="ID"
 state="Central Kalimantan"
 locality="Kab. Kota Waringin Timur"
-organization="FN Project"
+organization="SKT AIO"
 organizationalunit="99999"
-commonname="FN"
-email="rerechan0202@gmail.com"
+commonname="SN"
+email="skartistore@mail.com"
 
 # delete
 systemctl stop nginx haproxy
@@ -419,7 +413,7 @@ wget -q https://semvak.my.id/package/openvpn/vpn.sh && chmod +x vpn.sh && ./vpn.
 # // Membuat Service
 cat> /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray by FunnyVPN
+Description=Xray by AdminSN
 Documentation=https://indo-ssh.com
 After=network.target nss-lookup.target
 
@@ -508,7 +502,7 @@ wget -O /usr/bin/config.yaml "https://semvak.my.id/package/config.yaml"
 chmod +x /usr/bin/config.yaml
 cat> /etc/systemd/system/proxy.service << END
 [Unit]
-Description=Proxy Socet All OS By Rerechan02
+Description=Proxy Socet All OS By AdminSN
 Documentation=https://github.com/Rerechan-Team
 After=syslog.target network-online.target
 
@@ -768,7 +762,7 @@ Domain: $domain
 Namserver: $nsdomain
 WebAPI: $api773
 =========================
-@fn_project Autoscript
+@SKT-AIO
 "
 CHATID="6389176425"
 KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
@@ -778,6 +772,6 @@ curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "te
 clear
 echo ""
 echo -e "\033[96m_______________________________\033[0m"
-echo -e "\033[92m         INSTALL SUCCES\033[0m"
+echo -e "\033[92m     اَلْحَمْدُ للَّهِ رَبِّ الْعالَمِينَ.\033[0m"
 echo -e "\033[96m_______________________________\033[0m"
 sleep 1.5
