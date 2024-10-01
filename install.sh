@@ -241,7 +241,7 @@ fi
 mesg n || true
 clear
 #neofetch --ascii_distro Arcolinux_small
-info
+menu
 END
 chmod 644 /root/.profile
 
