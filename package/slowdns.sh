@@ -1,9 +1,7 @@
 #!/bin/bash
 #
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
-#  • Autoscript AIO Lite Menu By FN Project                                          |
-#  • FN Project Developer @Rerechan02 | @PR_Aiman | @farell_aditya_ardian            |
-#  • Copyright 2024 18 Marc Indonesia [ Kebumen ] | [ Johor ] | [ 上海，中国 ]       |
+#  • Autoscript AIO Lite Menu
 #  |════════════════════════════════════════════════════════════════════════════════════════════════════════════════|
 #
 clear
@@ -42,7 +40,7 @@ install_slowdns() {
 ========================
 SlowDNS / DNSTT Settings
 ========================"
-  read -rp "Your Nameserver: " -e Nameserver
+  read -rp "☠ Your Nameserver: " -e Nameserver
   echo -e "$Nameserver" > /etc/slowdns/nsdomain
 
   rm -f /etc/systemd/system/dnstt.service
@@ -94,5 +92,5 @@ rm -rf /root/slowdns.sh
 clear
 echo -e ""
 echo -e "Installing Patch SlowDNS Autoscript done..."
-echo "done .."
+echo "Beres Cok >.."
 #reboot
