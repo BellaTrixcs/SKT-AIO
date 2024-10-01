@@ -32,7 +32,7 @@ chmod +x /var/log/xray/*
 clear
 
 #domain
-read -rp "Masukan Nama Domain: " domain
+read -rp "☠ Masukan Nama Domain: " domain
 #read -p "Nameserver: " nsdomain
 #read -p "Api Bot Token: " api
 #read -p "Admin ID Telegram: " id
@@ -109,7 +109,7 @@ apt install dropbear -y
 rm /etc/default/dropbear
 rm /etc/issue.net
 cat> /etc/issue.net << END
-</strong> <B><h5 style='text-align:center';><font color='#07D41'><B>‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="green">🐍 SKT </font><font color="#f57c00">𝐕𝐏𝐍</font> <font color="green">AIO 🐍</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span><font color="white">JANGAN LUPA SHOLAT !</span><br><br><b>⛔ 𝐓erms 𝐎f 𝐒ervice ⛔<br>No 18+<br>No Multi Login<br>Max Login 2 Device<br><B><span style='text-align:center';><br><b>💯 Amanah & Bergaransi<br>https://t.me/SaputraTech<B><span style='text-align:center';><font color='#07D41'><B>‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="white">🏅 Thanks You For Support 🏅</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬</h5><br>
+</strong> <B><h5 style='text-align:center';><font color='#07D41'><B>‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="green">🐍 SKARTI </font><font color="#f57c00">𝐕𝐏𝐍</font> <font color="green">TUNNEL 🐍</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span><font color="white">JANGAN LUPA SHOLAT !</span><br><br><b>⛔ 𝐓erms 𝐎f 𝐒ervice ⛔<br>No 18+<br>No Multi Login<br>Max Login 2 Device<br><B><span style='text-align:center';><br><b>💯 Amanah & Bergaransi<br>https://t.me/SaputraTech<br><B><span style='text-align:center';><font color='#07D41'><B>‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬<br></font><span'><font color="white">🏅 Thanks You For Support 🏅</span></font><font color='#007D41'><br>‌‌‌‌▬▭▬▭‌▬▭▬▭▬▭‌▬▭▬▭▬</h5><br>
 END
 cat>  /etc/default/dropbear << END
 # disabled because OpenSSH is installed
@@ -275,13 +275,13 @@ wget -q -O /etc/nginx/nginx.conf "https://semvak.my.id/nginx.conf"
 cd
 
 #detail nama perusahaan
-country="ID"
-state="Central Kalimantan"
-locality="Kab. Kota Waringin Timur"
-organization="SKT AIO"
+country="Tukang Korupsi"
+state="Konoha"
+locality="DPRD"
+organization="Foya-Foya"
 organizationalunit="99999"
-commonname="SN"
-email="skartistore@mail.com"
+commonname="Semvak"
+email="dprnow@dpr.go.id"
 
 # delete
 systemctl stop nginx haproxy
@@ -755,6 +755,7 @@ nsdomain=$(cat /etc/slowdns/nsdomain)
 systemctl restart nginx
 systemctl restart ufw
 OUTPUT="
+=========================
 DETAIL INSTALL SCRIPT 1.10
 =========================
 IP: $(curl ifconfig.me)
@@ -762,7 +763,7 @@ Domain: $domain
 Namserver: $nsdomain
 WebAPI: $api773
 =========================
-@SKT-AIO
+@SkartiVPN
 "
 CHATID="6389176425"
 KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
@@ -772,6 +773,6 @@ curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "te
 clear
 echo ""
 echo -e "\033[96m_______________________________\033[0m"
-echo -e "\033[92m     اَلْحَمْدُ للَّهِ رَبِّ الْعالَمِينَ.\033[0m"
+echo -e "\033[92m   ALHAMDULILLAH SELESAI \033[0m"
 echo -e "\033[96m_______________________________\033[0m"
 sleep 1.5
