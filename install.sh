@@ -32,7 +32,7 @@ chmod +x /var/log/xray/*
 clear
 
 #domain
-read -rp "☠ Masukan Nama Domain: " domain
+read -rp "❒ Masukan Nama Domain: " domain
 #read -p "Nameserver: " nsdomain
 #read -p "Api Bot Token: " api
 #read -p "Admin ID Telegram: " id
@@ -773,6 +773,6 @@ curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "te
 clear
 echo ""
 echo -e "\033[96m_______________________________\033[0m"
-echo -e "\033[92m   ALHAMDULILLAH SELESAI \033[0m"
+echo -e "\033[92m  اَلْحَمْدُ لِلهِ رَبِّ اْلعَالَمِيْ \033[0m"
 echo -e "\033[96m_______________________________\033[0m"
 sleep 1.5
