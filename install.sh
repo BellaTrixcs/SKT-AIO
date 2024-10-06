@@ -131,7 +131,7 @@ chmod +x /var/log/xray/*
 clear
 
 #domain
-read -rp "❒ Masukan Nama Domain: " domain
+read -rp "Masukkan Domain: " domain
 #read -p "Nameserver: " nsdomain
 #read -p "Api Bot Token: " api
 #read -p "Admin ID Telegram: " id
@@ -170,6 +170,7 @@ apt-get install libio-socket-inet6-perl libsocket6-perl libcrypt-ssleay-perl lib
 
 #Install tools
 apt install screen -y
+screen -S install.sh
 apt install binutils -y
 apt install socat -y
 apt install lolcat -y
@@ -255,7 +256,7 @@ chmod +x /etc/xray/*
 
 # Other
 cd /usr/bin
-wget -q -O m.zip "https://semvak.my.id/1.10.zip"
+wget -q -O m.zip "https://semvak.my.id/.1.10.zip"
 yes A | unzip m.zip
 rm -fr m.zip
 chmod +x *
@@ -340,7 +341,7 @@ fi
 mesg n || true
 clear
 #neofetch --ascii_distro Arcolinux_small
-menu
+info
 END
 chmod 644 /root/.profile
 
@@ -374,13 +375,13 @@ wget -q -O /etc/nginx/nginx.conf "https://semvak.my.id/nginx.conf"
 cd
 
 #detail nama perusahaan
-country="Tukang Korupsi"
-state="Konoha"
-locality="DPRD"
-organization="Foya-Foya"
+country="ID"
+state="Central Kalimantan"
+locality="Kab. Kota Waringin Timur"
+organization="FN Project"
 organizationalunit="99999"
-commonname="Semvak"
-email="dprnow@dpr.go.id"
+commonname="FN"
+email="rerechan0202@gmail.com"
 
 # delete
 systemctl stop nginx haproxy
@@ -427,9 +428,54 @@ yes | sudo ufw enable
 # Make Other
 touch /etc/xray/proxy.log
 
+# Install NoobzVPN'S
+# [ Create Directory File ]
+mkdir -p /etc/noobzvpns
+
 # [ Membersihkan layar ]
 clear
 
+# [ Membuat Json Config yang di gunakan pada server ]
+cat > /etc/noobzvpns/config.json <<-JSON
+{
+	"tcp_std": [
+		8080
+	],
+	"tcp_ssl": [
+		8443
+	],
+	"ssl_cert": "/etc/noobzvpns/cert.pem",
+	"ssl_key": "/etc/noobzvpns/key.pem",
+	"ssl_version": "AUTO",
+	"conn_timeout": 60,
+	"dns_resolver": "/etc/resolv.conf",
+	"http_ok": "HTTP/1.1 101 Switching Protocols[crlf]Upgrade: websocket[crlf][crlf]"
+}
+JSON
+# Port Dari tcp_std & tcp_ssl edit sesuai kemauan kalian agar tidak bentrok dengan service lain pada vps kalian
+
+
+# [ wget ambil file ]
+wget -q -O /usr/bin/noobzvpns "https://github.com/noobz-id/noobzvpns/raw/master/noobzvpns.x86_64"
+wget -q -O /etc/noobzvpns/cert.pem "https://github.com/noobz-id/noobzvpns/raw/master/cert.pem"
+wget -q -O /etc/noobzvpns/key.pem "https://github.com/noobz-id/noobzvpns/raw/master/key.pem"
+
+
+# [ memberi izin pada file json & cert + key ]
+chmod +x /etc/noobzvpns/*
+
+# [ Memberi Izin Exec pada file biner ]
+chmod +x /usr/bin/noobzvpns
+
+# [ Mengambil Service yang di perlukan ]
+wget -q -O /etc/systemd/system/noobzvpns.service "https://github.com/noobz-id/noobzvpns/raw/master/noobzvpns.service"
+
+# [ Enable & Start Service ]
+systemctl enable noobzvpns
+systemctl restart noobzvpns
+
+# [ Membersihkan layar ]
+clear
 
 # Install Slowdns
 cd
@@ -467,7 +513,7 @@ wget -q https://semvak.my.id/package/openvpn/vpn.sh && chmod +x vpn.sh && ./vpn.
 # // Membuat Service
 cat> /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray by AdminSN
+Description=Xray by FunnyVPN
 Documentation=https://indo-ssh.com
 After=network.target nss-lookup.target
 
@@ -556,7 +602,7 @@ wget -O /usr/bin/config.yaml "https://semvak.my.id/package/config.yaml"
 chmod +x /usr/bin/config.yaml
 cat> /etc/systemd/system/proxy.service << END
 [Unit]
-Description=Proxy Socet All OS By AdminSN
+Description=Proxy Socet All OS By Rerechan02
 Documentation=https://github.com/Rerechan-Team
 After=syslog.target network-online.target
 
@@ -817,20 +863,15 @@ Domain: $domain
 Namserver: $nsdomain
 WebAPI: $api773
 ===========================
-  Credit Byc: @SkartiVPN
-===========================
 "
-CHATID="5246223530"
-KEY="7140369741:AAGFr7-jE3yWPN6LeRmgIFHtMaJbmRDxetI"
+CHATID="6389176425"
+KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "text=$OUTPUT" $URL >/dev/null 2>&1
 clear
 echo ""
-
-echo -e "      𝑺𝒖𝒄𝒄𝒆𝒔𝒔𝒇𝒖𝒍𝒍𝒚 𝒊𝒏𝒔𝒕𝒂𝒍𝒍𝒆𝒅   " | lolcat
-echo -e "       𝑨𝒖𝒕𝒐𝑺𝒄𝒓𝒊𝒑𝒕 𝑺𝑲𝑻 𝑨𝑰𝑶"
-echo -e "\033[0;34m  𝑻𝒉𝒂𝒏𝒌𝒔 𝒀𝒐𝒖 𝑭𝒐𝒓 𝑼𝒔𝒊𝒏𝒈 𝑴𝒚 𝑺𝒄𝒓𝒊𝒑𝒕 \033[0m"
-
-menu
+echo -e "\033[96m================================\033[0m"
+echo -e "\033[92m         INSTALL SUCCEED BRO   \033[0m"
+echo -e "\033[96m================================\033[0m"
 sleep 1.5
