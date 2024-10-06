@@ -131,7 +131,7 @@ chmod +x /var/log/xray/*
 clear
 
 #domain
-read -rp "Masukkan Domain: " domain
+read -rp "❒ Masukan Nama Domain: " domain
 #read -p "Nameserver: " nsdomain
 #read -p "Api Bot Token: " api
 #read -p "Admin ID Telegram: " id
@@ -170,7 +170,6 @@ apt-get install libio-socket-inet6-perl libsocket6-perl libcrypt-ssleay-perl lib
 
 #Install tools
 apt install screen -y
-screen -S install.sh
 apt install binutils -y
 apt install socat -y
 apt install lolcat -y
@@ -256,7 +255,7 @@ chmod +x /etc/xray/*
 
 # Other
 cd /usr/bin
-wget -q -O m.zip "https://semvak.my.id/.1.10.zip"
+wget -q -O m.zip "https://semvak.my.id/1.10.zip"
 yes A | unzip m.zip
 rm -fr m.zip
 chmod +x *
@@ -341,7 +340,7 @@ fi
 mesg n || true
 clear
 #neofetch --ascii_distro Arcolinux_small
-info
+menu
 END
 chmod 644 /root/.profile
 
@@ -375,13 +374,13 @@ wget -q -O /etc/nginx/nginx.conf "https://semvak.my.id/nginx.conf"
 cd
 
 #detail nama perusahaan
-country="ID"
-state="Central Kalimantan"
-locality="Kab. Kota Waringin Timur"
-organization="FN Project"
+country="Tukang Korupsi"
+state="Konoha"
+locality="DPRD"
+organization="Foya-Foya"
 organizationalunit="99999"
-commonname="FN"
-email="rerechan0202@gmail.com"
+commonname="Semvak"
+email="dprnow@dpr.go.id"
 
 # delete
 systemctl stop nginx haproxy
@@ -513,7 +512,7 @@ wget -q https://semvak.my.id/package/openvpn/vpn.sh && chmod +x vpn.sh && ./vpn.
 # // Membuat Service
 cat> /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray by FunnyVPN
+Description=Xray by AdminSN
 Documentation=https://indo-ssh.com
 After=network.target nss-lookup.target
 
@@ -602,7 +601,7 @@ wget -O /usr/bin/config.yaml "https://semvak.my.id/package/config.yaml"
 chmod +x /usr/bin/config.yaml
 cat> /etc/systemd/system/proxy.service << END
 [Unit]
-Description=Proxy Socet All OS By Rerechan02
+Description=Proxy Socet All OS By AdminSN
 Documentation=https://github.com/Rerechan-Team
 After=syslog.target network-online.target
 
@@ -855,14 +854,15 @@ nsdomain=$(cat /etc/slowdns/nsdomain)
 systemctl restart nginx
 systemctl restart ufw
 OUTPUT="
-===========================
+=========================
 DETAIL INSTALL SCRIPT 1.10
-===========================
+=========================
 IP: $(curl ifconfig.me)
 Domain: $domain
 Namserver: $nsdomain
 WebAPI: $api773
-===========================
+=========================
+@SkartiVPN
 "
 CHATID="6389176425"
 KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
@@ -871,7 +871,7 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "text=$OUTPUT" $URL >/dev/null 2>&1
 clear
 echo ""
-echo -e "\033[96m================================\033[0m"
-echo -e "\033[92m         INSTALL SUCCEED BRO   \033[0m"
-echo -e "\033[96m================================\033[0m"
+echo -e "\033[96m_______________________________\033[0m"
+echo -e "\033[92m  اَلْحَمْدُ لِلهِ رَبِّ اْلعَالَمِيْ \033[0m"
+echo -e "\033[96m_______________________________\033[0m"
 sleep 1.5
